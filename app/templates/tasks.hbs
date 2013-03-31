@@ -1,0 +1,15 @@
+<div class="left">
+
+	<div class='tools'>
+		{{#linkTo tasks.new class='btn btn-small btn-primary pull-right'}}New{{/linkTo}}
+	</div>
+
+	<div class='tasks-list'>
+		{{#each task in controller}}
+			{{ partial "taskItem" }}
+		{{/each}}
+	</div>
+</div>
+<div class="right">
+	{{outlet}}
+</div>

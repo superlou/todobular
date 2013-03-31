@@ -1,0 +1,10 @@
+<div class='task'>
+	<div class='title'>
+		{{view Ember.TextField valueBinding='name'}}
+	</div>
+	<div class='details'>
+		{{view Ember.TextArea valueBinding='details'}}
+	</div>
+
+	<button {{action createTask}} class='btn'>Save</button>
+</div>
