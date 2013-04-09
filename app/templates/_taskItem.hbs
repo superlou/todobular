@@ -1,5 +1,8 @@
 {{#linkTo task task}}
 	<div class="task-item">
 		{{task.name}}
+		{{#each task.tags}}
+			<span class='label pull-right'>{{name}}</span>
+		{{/each}}
 	</div>
 {{/linkTo}}

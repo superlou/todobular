@@ -77,6 +77,29 @@ $button-face: #8AC;
 	@include gradient(#FFF, #EEE);
 
 	border-bottom: 1px solid lighten($subtle-line, 100);
+
+	#tags {
+		position: relative;
+		top: 3px;
+
+		a.tag, a.tag {
+			padding: 6px 8px;
+			margin: 0px 0px;
+			text-decoration: none;
+			color: #468;
+		}
+
+		a.tag:hover, a.tag:active {
+			color: #246;
+		}
+
+		.active {
+			@include round-corners(20px);
+			@include gradient(#DDD, #FFF);
+			border-top: 1px solid #FFF;
+			border-bottom: 1px solid #DDD;
+		}
+	}
 }
 
 .tasks-list {

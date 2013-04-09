@@ -1,0 +1,7 @@
+<span id='tags'>
+	{{#each controller}}
+		<a href='#' class='tag' {{bindAttr class='active'}} {{action setFilterOn id}}>
+			{{name}}
+		</a>
+	{{/each}}
+</span>

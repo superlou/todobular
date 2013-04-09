@@ -11,7 +11,7 @@ exports.config =
       order:
         before: [
           'vendor/javascripts/jquery-1.8.3.min.js'
-          'vendor/javascripts/handlebars-1.0.0.rc.2.js'
+          'vendor/javascripts/handlebars-rc3.js'
           ]
         after: [
           'vendor/javascripts/ember-data.js'
