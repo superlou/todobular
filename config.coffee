@@ -11,6 +11,7 @@ exports.config =
       order:
         before: [
           'vendor/javascripts/jquery-1.8.3.min.js'
+          'vendor/javascripts/jquery.autosize.js'
           'vendor/javascripts/handlebars-rc3.js'
           ]
         after: [

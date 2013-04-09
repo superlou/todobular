@@ -161,5 +161,11 @@ $button-face: #8AC;
 		font-family: sans-serif;
 		font-size: 1em;
 		@include box-shadow-clear();
-	}
+		}
+
+	.details textarea.transition {
+			-webkit-transition: height 0.2s;
+			-moz-transition: height 0.2s;
+			transition: height 0.2s;
+		}
 }

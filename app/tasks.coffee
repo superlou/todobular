@@ -67,7 +67,23 @@ App.TasksController = Ember.ArrayController.extend {
 	}
 
 App.TaskController = Ember.ObjectController.extend {
+	triggerAutosize: (->
+		$('.details textarea').trigger('autosize');
+		).observes('content.details')
+
 	deleteTask: ->
 		this.get('content').deleteRecord();
 		this.get('target').transitionTo('tasks')
 	}
+
+Ember.TextArea.reopen {
+	didInsertElement: ->
+		$('.details textarea').autosize({append: "\n"})
+
+		# Hack to not transition textarea height on creation
+		setTimeout ->
+				$('.details textarea').addClass('transition')
+			, 1000
+
+		this._super()
+}
