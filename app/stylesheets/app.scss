@@ -61,6 +61,7 @@ h2 {
 	bottom: 0px;
 	width: 60%;
 	right: 0px;
+	overflow-y: auto;
 	background: url('/grey_wash_wall.png');
 	@include box-shadow(0px, 0px, 20px, rgba(0, 0, 0, 0.5), inset);
 }
