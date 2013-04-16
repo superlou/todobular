@@ -12,6 +12,7 @@ exports.config =
         before: [
           'vendor/javascripts/jquery-1.8.3.min.js'
           'vendor/javascripts/jquery.autosize.js'
+          'vendor/jquery-ui-1.10.2.sortable.js'
           'vendor/javascripts/handlebars-rc3.js'
           ]
         after: [

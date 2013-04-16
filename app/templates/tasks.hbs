@@ -6,9 +6,7 @@
 	</div>
 
 	<div class='tasks-list'>
-		{{#each task in filteredContent}}
-			{{ partial "taskItem" }}
-		{{/each}}
+		{{render tasksList}}
 	</div>
 </div>
 <div class="right">

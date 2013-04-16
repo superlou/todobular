@@ -1,0 +1,10 @@
+{{#linkTo task view.content}}
+	{{#with view.content}}
+	<div class="task-item">
+		{{name}}
+		{{#each tags}}
+			<span class='label pull-right'>{{name}}</span>
+		{{/each}}
+	</div>
+	{{/with}}
+{{/linkTo}}
