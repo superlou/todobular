@@ -10,6 +10,7 @@ App.Task = DS.Model.extend {
 	name: DS.attr 'string', {defaultValue: 'Enter a task name'}
 	details: DS.attr 'string', {defaultValue: 'Describe the task'}
 	tags: DS.hasMany 'App.Tag'
+	priority: DS.attr 'number', {defaultValue: 0}
 	}
 
 App.Tag = DS.Model.extend {

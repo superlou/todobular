@@ -67,10 +67,20 @@ App.TasksController = Ember.ArrayController.extend {
 	}
 
 
- 
+
 App.TasksListController = Ember.ArrayController.extend {
 	needs: ['tasks']
 	contentBinding: 'controllers.tasks.filteredContent'
+	sortProperties: ['priority']
+	sortAscending: false
+
+	# todo Make this smarter
+	updatePrioritiesByOrder: (orderedTasks)->
+		currentPriority = orderedTasks.get('length')
+
+		orderedTasks.forEach( (item, index) ->
+				item.set('priority', currentPriority--)
+			)
 }
  
 App.TasksListView = Ember.CollectionView.extend {
@@ -85,7 +95,21 @@ App.TasksListView = Ember.CollectionView.extend {
  
 	didInsertElement: ->
 		this._super();
-		this.$().sortable({}).disableSelection();
+		self = this
+		this.$().sortable({update: (event, ui)->
+			domTasks = ui.item.parent().children()
+			domTasks = Ember.A($.makeArray(domTasks))
+
+			orderedTasks = domTasks.map( 
+				(item, index) ->
+					return Ember.View.views[item.id].get('content')
+				)
+
+			
+			self.controller.updatePrioritiesByOrder(orderedTasks)
+			})
+
+		this.$().disableSelection()
 }
  
 App.TaskController = Ember.ObjectController.extend {
