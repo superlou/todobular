@@ -67,7 +67,6 @@ App.TasksController = Ember.ArrayController.extend {
 	}
 
 
-
 App.TasksListController = Ember.ArrayController.extend {
 	needs: ['tasks']
 	contentBinding: 'controllers.tasks.filteredContent'

@@ -6,4 +6,7 @@
 		{{view Ember.TextArea valueBinding='details'}}
 	</div>
 	<button {{action deleteTask}} class='btn'>Delete</button>
+	<div class='updates'>
+		{{render TaskUpdates updates}}
+	</div>
 </div>

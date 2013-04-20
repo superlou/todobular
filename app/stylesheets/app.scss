@@ -157,7 +157,7 @@ $button-face: #8AC;
 		@include box-shadow-clear();
 	}
 
-	.details textarea {
+	.details textarea, .updates textarea {
 		border: none;
 		width: 100%;
 		font-family: sans-serif;
@@ -165,7 +165,7 @@ $button-face: #8AC;
 		@include box-shadow-clear();
 		}
 
-	.details textarea.transition {
+	.details textarea.transition, .updates textarea.transition {
 			-webkit-transition: height 0.2s;
 			-moz-transition: height 0.2s;
 			transition: height 0.2s;
